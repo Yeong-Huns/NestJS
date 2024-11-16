@@ -18,8 +18,8 @@ export class MovieService {
         },
         {
             id: 2,
-            title: '신밧드의 모험',
-            genre: 'fantasy'
+            title: '매드맥스',
+            genre: 'action'
         },
     ];
     private idCounter = 3;
