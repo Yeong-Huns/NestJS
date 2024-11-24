@@ -32,8 +32,6 @@ export class MovieService {
     }
 
     findAll(title?: string) {
-        console.log(this.movies);
-
         if (!title) return this.movies;
         return this.movies.filter(m => m.title.startsWith(title));
     }
