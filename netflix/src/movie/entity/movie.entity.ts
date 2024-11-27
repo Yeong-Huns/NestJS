@@ -19,7 +19,7 @@ export class Movie extends BaseEntity {
     @Column()
     genre: string;
 
-    @OneToOne(() => MovieDetail)
+    @OneToOne(() => MovieDetail, movieDetail => movieDetail.id, { cascade: true })
     @JoinColumn()
     detail: MovieDetail;
 }

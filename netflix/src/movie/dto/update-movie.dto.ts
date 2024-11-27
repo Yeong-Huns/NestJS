@@ -1,24 +1,4 @@
-import {
-    Equals,
-    IsArray,
-    IsBoolean,
-    IsDate,
-    IsDateString,
-    IsDefined,
-    IsEmpty,
-    IsEnum,
-    IsIn,
-    IsInt,
-    IsNotEmpty,
-    IsNotIn,
-    IsNumber,
-    IsOptional,
-    IsString,
-    NotEquals, registerDecorator, Validate,
-    ValidationArguments, ValidationOptions,
-    ValidatorConstraint,
-    ValidatorConstraintInterface
-} from "class-validator";
+import {IsNotEmpty, IsOptional, registerDecorator, ValidationArguments, ValidationOptions, ValidatorConstraint, ValidatorConstraintInterface} from "class-validator";
 
 enum MovieGenre{
     FANTASY = 'fantasy',
@@ -55,4 +35,8 @@ export class UpdateMovieDto{
     @IsNotEmpty()
     @IsOptional()
     genre?: string;
+
+    @IsNotEmpty()
+    @IsOptional()
+    detail?: string;
 }
