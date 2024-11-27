@@ -14,6 +14,11 @@ export class MovieController {
     return this.movieService.create(body);
   }
 
+  @Post('series')
+  createSeries(@Body() body: CreateMovieDto) {
+    return this.movieService.createSeries(body);
+  }
+
   @Get()
   findAll(@Query('title')title?: string) {
     return this.movieService.findAll(title);
